@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html>
+ {ms:include filename=head-file.htm/}
+ <body class="met-navfixed">
+  {ms:include filename=head.htm/}
+  <div class="met-banner " data-height='300||'>
+   <div class="slick-slide">
+    <img class="cover-image" src="http://sjwh-zqc.sanine.cn/wenchuan/image/b-service.jpeg" sizes="(max-width: 767px) 500px" alt="" >
+    <div class="banner-text p-5">
+     <div class='container'>
+      <div class='banner-text-con'>
+       <div>
+        <h1 style="color:;">{ms:field.typetitle/}</h1>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  <main class="news_list_page_met_11_1 met-news">
+    <div class="container">
+        <div class="row">
+	     		<!--展示下级栏目-->
+	            <div class="news_list_page_met_11_1" m-id="68">
+	                <ul class="service-list blocks-100 blocks-sm-2 blocks-md-3 blocks-xlg-4  clearfix">
+	                {ms:channel typeid=99}
+	                       <li class="item">
+			                <a href="[field.typelink/]" title="[field.typetitle/]" target="_self">
+			                <img src="{ms:global.host/}[field.typelitpic/]" alt="[field.typetitle/]">
+			                <h4>[field.typetitle/]</h4>
+			                <p>[field.typedescrip/]</p>
+			                </a>
+		                </li>
+		             {/ms:channel}
+	               </ul>
+	            </div>
+         </div>
+    </div>
+</main>
+  
+  
+  
+  {ms:include filename=footer.htm/}
+ </body>
+ <script>
+  $(".navbar-nav>li").eq(1).addClass("active").find("a").addClass("link").addClass("active");
+ </script>
+</html>

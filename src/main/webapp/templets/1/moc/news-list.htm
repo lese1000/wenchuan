@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html>
+ {ms:include filename=head-file.htm/}
+ <body class="met-navfixed">
+  {ms:include filename=head.htm/}
+  <div class="met-banner " data-height='300||'>
+   <div class="slick-slide">
+    <img class="cover-image" src="http://sjwh-zqc.sanine.cn/wenchuan/image/b-news.jpeg" sizes="(max-width: 767px) 500px" alt="" >
+    <div class="banner-text p-5">
+     <div class='container'>
+      <div class='banner-text-con'>
+       <div>
+        <h1 style="color:;">{ms:field.typetitle/}</h1>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  
+  <main class="news_list_page_met_11_1 met-news">
+    <div class="container">
+        <div class="row">
+                  <div class="met-news-list">
+                        <ul class="ulstyle met-pager-ajax imagesize" data-scale="100x160" m-id="68" style="padding-left:5px;">
+                            {ms:arclist ispaging=true}                
+				                    <!-- 图文模式 -->
+						    	<li class="media media-lg border-bottom1">
+									<div class="media-left">
+										<a href="[field.link/]" title="[field.descrip/]" title="[field.title/]" target="_self">
+											<img class="media-object" src="{ms:global.host/}/[field.litpic/]" alt="[field.title/]" style="">
+										</a>
+									</div>
+									<div class="media-body">
+										<h4>
+											<a href="[field.link/]" title="[field.title/]" target="_self">[field.title/]</a>
+										</h4>
+										<p class="des font-weight-300">
+											[field.descrip/]
+										</p>
+										<p class="info font-weight-300">
+											<span>[field.date fmt=yyyy-MM-dd/]</span>
+											<span></span>
+											
+										</p>
+									</div>
+								</li>
+					        {/ms:arclist}
+                    
+                        </ul>
+                        
+                        
+                        
+                         <div>
+					         <div class='met_pager' style="margin: 5px 0;">
+					          <div class='met_pager'>
+					           <a class='Ahover' href="{ms:page.pre/}">上一页</a>
+					           <a class='Ahover' href="{ms:page.next/}">下一页</a>
+					          </div>
+					         </div>
+				        </div>
+                  </div>
+         </div>
+    </div>
+</main>
+
+  
+  
+  
+  {ms:include filename=footer.htm/}
+ </body>
+ <script>
+  $(".navbar-nav>li").eq(3).addClass("active").find("a").addClass("link").addClass("active");
+ </script>
+</html>
